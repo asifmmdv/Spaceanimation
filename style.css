@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body{
+    background: url(./images/bodyImg.jpg) center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .space{
+    position: relative;
+    height: 400px;
+    width: 400px;
+  }
+  .sun{
+    background: url(./images/sun.png) center/cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    transform: translate(-50%, -50%);
+    animation: sun-rotation 60s infinite linear;
+  }
+  .earth-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    height: 360px;
+    margin-top: -180px;
+    margin-left: -180px;
+    animation: earth-orbit 60s infinite linear;
+    border-radius: 50%;
+  }
+  .earth {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background:url(./images/earth.png) center/cover;
+    transform: translateX(-50%);
+    animation: earth-rotation 60s infinite linear;
+  }
+  .moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    animation: moon-orbit 60s infinite linear;
+  }
+  .moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    background:url(./images/moon.jpg) center/cover;
+    transform: translateX(-50%);
+    animation: moon-rotation 60s infinite linear;
+  }
+  @keyframes sun-rotation {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  @keyframes earth-rotation {
+    from {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
+  @keyframes earth-orbit {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes moon-rotation{
+    from {
+        transform: translateX(-50%) rotate(0deg);
+      }
+      to {
+        transform: translateX(-50%) rotate(360deg);
+      }
+  }
+  @keyframes moon-orbit {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .asteroid{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(./images/Untitled-3.png) center/cover;
+    height: 24px;
+    width: 14px;
+    animation: asteroid-movement 5s infinite linear,asteroid-flash 1s infinite alternate;
+  }
+  @keyframes asteroid-movement{
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-700px, 100px);}}
+      @keyframes asteroid-flash {
+        0% {
+          opacity: 0;
+        }
+        25%{
+            opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        75%{
+            opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      
+  .asteroid2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(./images/Untitled-3.png) center/cover;
+    height: 24px;
+    width: 14px;
+    animation: asteroid-movement2 2s infinite linear,asteroid-flash 1s infinite alternate;
+  }
+  @keyframes asteroid-movement2{
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-300px, 200px);}}
+      @keyframes asteroid-flash {
+        0% {
+          opacity: 0;
+        }
+        25%{
+            opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        75%{
+            opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+  .asteroid3{
+    position: absolute;
+    top:0;
+    right: 0;
+    background: url(./images/Untitled-3.png) center/cover;
+    height: 24px;
+    width: 14px;
+    animation: asteroid-movement3 10s infinite linear,asteroid-flash 1s infinite alternate;
+  }
+  @keyframes asteroid-movement3{
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-500px, 100px);}}
+      @keyframes asteroid-flash {
+        0% {
+          opacity: 0;
+        }
+        25%{
+            opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        75%{
+            opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      
